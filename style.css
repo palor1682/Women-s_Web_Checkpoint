@@ -1,0 +1,71 @@
+body{
+	padding: 10px;
+	background-color: white;
+	font-size: 125%;
+}
+
+h1{
+    font-size: 38px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 28px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    margin: 50px;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+/* Width, border, margin, padding, and border radius are used on every image.
+Pseudo classes are used to style every other (or every third) image */
+
+img{
+    width: 20%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border-width: 10px;
+    border-radius: 10%;
+}
+
+img:nth-of-type(2n){
+    background-color: blueviolet;
+}
+
+
+li{
+    display: inline-block;
+}
+
+#maincontent{
+    position: absolute;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 2px;
+    padding: 4px;
+    font-size: 20px;
+    background-color: yellow;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+nav a.active{
+    text-decoration: dotted underline;
+    text-underline-position: under;
+    text-transform: uppercase;
+}
