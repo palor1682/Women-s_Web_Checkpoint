@@ -6,28 +6,33 @@
   <!-- connects to the stylesheets -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- connect to a Google font -->
-  <!-- connect to a Font Aweseom font -->
-  <!-- connect to a favicon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat">
+  <script src="https://kit.fontawesome.com/e31ec8da8e.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/favicon1.png">
   <title>Women's Web</title>
 </head>
 
 <body>
+  <a href="#main" class="skip">Skip to main content</a>
   <header>
-    <nav>
-        <ul>
-          <li class="active"><a href="index.html">About</a></li>
-          <li><a href="literature.html">Literature</a></li>
-          <li><a href="history.html">History and Politics</a></li>
-          <li><a href="femdict.html">Feminist Dictionary</a></li>
+    <div>
+      <nav>
+        <ul class="nav_container">
+          <li class="active nav_item"><a href="index.html">About</a></li>
+          <li class="nav_item"><a href="literature.html">Literature</a></li>
+          <li class="nav_item"><a href="history.html">History and Politics</a></li>
+          <li class="nav_item"><a href="femdict.html">Feminist Dictionary</a></li>
         </ul>
-    </nav>
-    <h1> Women's Web </h1>
+      </nav>
+    </div>
+    <div class="hero_image">
+      <h1> Women's Web </h1>
+    </div>
   </header>
 
-  <main>
-    <img src="images/women_march_pano.jpg" width="200" alt="Ann Arbor Women's March">
-
+  <main id="main">
+    <!-- <img src="images/women_march_pano.jpg" width="200" alt="Ann Arbor Women's March"> -->
     <div>
       <p>
         This website started as an idea when Kelsey Toporski was a freshman in
@@ -82,10 +87,11 @@
 
   <footer>
     <p class="thanks">
-      Thanks for visiting! <i></i>
+      Thanks for visiting!
     </p>
-    <p>Orginal content created by Kelsey Toporski 2019</p>
-    <a href="#main">Back to Top</a>
+    <p>Orginal content created by Kelsey Toporski 2019 <i class="fa-solid fa-envelope"></i> <i class="fa-solid fa-phone"></i>
+    </p>
+    <!-- <a href="#main">Back to Top</a> -->
   </footer>
 
 </body>
