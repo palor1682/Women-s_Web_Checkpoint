@@ -11,7 +11,7 @@
 }
 
 .skip:focus {
-    left: 50%;
+    left: 10%;
     transform: translateX(-50%);
     opacity: 10;
 }
@@ -34,13 +34,14 @@ h1 {
     margin: 5px;
     padding: 5px;
     font-size: 35px;
-    font-weight: bold;
+    font-weight: bolder;
     font-family: Lora, Georgia, serif;
+    text-transform: uppercase;
     text-align: center;
-    color: red;
+    color: black;
     animation-name: text_animation;
     animation-duration: 5s;
-    animation-iteration-count: 5;
+    animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
@@ -80,25 +81,32 @@ p {
     line-height: 1.2;
     font-family: Montserrat, Geneva, Tahoma, sans-serif;
     font-size: 100%;
-    text-align: left;
+    text-align: justify;
 }
 
 img {
-    width: 50%;
+    width: auto;
+    height: auto;
     display: block;
     margin: auto;
     padding: 10px;
-    border-width: 2px;
     border-radius: 50%;
+}
+
+div:nth-of-type(even) img {
     border-style: dotted;
     border-color: #de0000;
+    border-width: 2px;
+}
+
+img:hover {
+    background-color: #F4BBA8;
 }
 
 nav ul li {
     margin: 10px;
     padding: 5px;
     border-width: 10px;
-    border-radius: 25px;
     font-size: 25px;
     font-family: Lora, Georgia, serif;
     background-color: black;
@@ -106,13 +114,13 @@ nav ul li {
 }
 
 nav a {
-    color: white;
+    color: grey;
     text-decoration: none;
     padding: 20px;
 }
 
 .active a {
-    color: #fdb515;
+    color: pink;
 }
 
 main div ul li {
@@ -147,6 +155,7 @@ footer p {
     border-width: 2px;
     margin-left: 20px;
     padding: 2px;
+    color: white;
 }
 
 .fa-solid {
@@ -157,35 +166,38 @@ footer p {
     font-size: 25px;
 }
 
-.hero_image {
+ .hero_image {
     background-color:  #ACBDBD;
-    background-image: url("../images/women_march_pano.jpg");
+    background-image: url("../images/womens-march.png");
     background-size: cover;
+    background-repeat: no-repeat;
     color: #de0000;
-    padding-top: 50px;
-    padding-bottom: 200px;
+    padding: 200px;
+    opacity: 85%;
 }
 
-.hero_image h1{
-    background-color: white;
-    border-radius: 15px;
-    width: 50%;
+/* .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+} */
+
+.nav_container {
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (min-width: 560px) {
     .grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
-    .preface{
+    .preface {
         grid-column: 1/3;
     }
-    .nav_container{
-        display: flex;
-        flex-direction: column;
-        /* flex-wrap: wrap; */
+    .nav_container {
+        flex-direction: row;
     }
+
 }
 
 .preface p {
@@ -203,9 +215,57 @@ main div {
 
 @media only screen and (min-width: 1000px) {
     .nav_container{
-        display: flex;
         flex-direction: row;
         justify-content: space-around;
+        background-color: black;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
+.spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.spinner_hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 15px solid rgb(224, 217, 217);
+    border-top-color: #65EBDB;
+    border-bottom-color: #EBC408;
+    border-left-color: #EBA788;
+    border-radius: 50%;
+    animation-name: progress_bar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes progress_bar {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+footer {
+    background-color: black;
+}
