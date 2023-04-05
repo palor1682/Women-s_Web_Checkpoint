@@ -17,28 +17,20 @@
 }
 
 main div {
-    border-width: 2px;
     border-radius: 25px;
     padding: 15px;
     margin: 20px;
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-main div:hover {
-    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2);
 }
 
 h1 {
-    border-width: 5px;
-    margin: 5px;
+    margin: 25px;
     padding: 5px;
     font-size: 35px;
     font-weight: bolder;
     font-family: Lora, Georgia, serif;
     text-transform: uppercase;
     text-align: center;
-    color: black;
+    color: #A9942C;
     animation-name: text_animation;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -57,7 +49,6 @@ h1 {
 }
 
 h2 {
-    border-width: 5px;
     margin-bottom: 15px;
     padding: 5px;
     font-size: 28px;
@@ -66,7 +57,6 @@ h2 {
 }
 
 h3 {
-    border-width: 5px;
     margin: 10px;
     padding: 5px;
     font-size: 20px;
@@ -75,13 +65,12 @@ h3 {
 }
 
 p {
-    border-width: 5px;
     margin: 10px;
     padding: 8px;
     line-height: 1.2;
     font-family: Montserrat, Geneva, Tahoma, sans-serif;
     font-size: 100%;
-    text-align: justify;
+    text-align: left;
 }
 
 img {
@@ -106,7 +95,6 @@ img:hover {
 nav ul li {
     margin: 10px;
     padding: 5px;
-    border-width: 10px;
     font-size: 25px;
     font-family: Lora, Georgia, serif;
     background-color: black;
@@ -126,85 +114,69 @@ nav a {
 main div ul li {
     margin: 2px;
     padding: 8px;
-    border-width: 2px;
     text-align: center;
     font-family: Montserrat, Geneva, Tahoma, sans-serif;
     font-style: italic;
     font-size: 100%;
-    list-style-type: disc;
+    list-style-image: url("../images/book-stack.png");
     list-style-position: inside;
 }
 
-dt {
-    border-width: 2px;
-    margin: 5px;
-    padding: 5px;
-    font-size: 20px;
-    font-family: Lora, Georgia, serif;
-}
-
-dd {
-    border-width: 2px;
-    margin: 5px;
-    padding: 5px;
-    font-size: 15px;
-    font-family: Lora, Georgia, serif;
-}
-
 footer p {
-    border-width: 2px;
     margin-left: 20px;
     padding: 2px;
     color: white;
 }
 
 .fa-solid {
-    border-width: 2px;
     margin: 5px;
     padding: 2px;
     color:  #ACBDBD;
     font-size: 25px;
 }
 
- .hero_image {
+.hero_image {
     background-color:  #ACBDBD;
     background-image: url("../images/womens-march.png");
     background-size: cover;
     background-repeat: no-repeat;
     color: #de0000;
     padding: 200px;
-    opacity: 85%;
 }
-
-/* .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-} */
 
 .nav_container {
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 @media only screen and (min-width: 560px) {
     .grid{
+        display: grid;
         grid-template-columns: 1fr;
     }
 
-    .preface {
-        grid-column: 1/3;
-    }
-    .nav_container {
-        flex-direction: row;
+    .femdict_grid {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
+    .history_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .nav_container {
+        flex-direction: row;
+        background-color: black;
+    }
 }
 
 .preface p {
     text-align: center;
 }
 
-h2, h3, dt {
+h2, h3 {
     background-color: #F4BBA8;
     border-radius: 10px;
 }
@@ -220,7 +192,27 @@ main div {
         background-color: black;
     }
 
+    .femdict_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .preface {
+        grid-column: 1/3;
+        font-size: larger;
+    }
+
+    .history_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item_one {
+        grid-column: 1/3;
+    }
+
     .grid {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -234,7 +226,7 @@ main div {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.75s, visibility 0.75s;
+    transition: opacity 0.75s, visibility 105s;
 }
 
 .spinner_hidden {
@@ -246,7 +238,7 @@ main div {
     content: "";
     width: 100px;
     height: 100px;
-    border: 15px solid rgb(224, 217, 217);
+    border: 15px solid rgb(255, 255, 255);
     border-top-color: #65EBDB;
     border-bottom-color: #EBC408;
     border-left-color: #EBA788;
@@ -268,4 +260,112 @@ main div {
 
 footer {
     background-color: black;
+    padding: 10px;
+}
+
+dt {
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: Lora, Georgia, serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+
+dd {
+    margin: 5px;
+    padding-top: 5px;
+    font-size: 18px;
+    font-family: Lora, Georgia, serif;
+    font-weight: bolder;
+}
+
+div.card {
+    opacity: 80%;
+    background-color: white;
+}
+
+.agency {
+    background-image: url("../images/agency.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.binary {
+    background-image: url("../images/binary.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.equality {
+    background-image: url("../images/equality.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.equity {
+    background-image: url("../images/equity.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.feminism {
+    background-image: url("../images/feminism.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+    opacity: 95%;
+}
+
+.gender{
+    background-image: url("../images/gender.jpg");
+    background-size: cover;
+    background-position: top left;
+    color: black;
+}
+
+.hegemony {
+    background-image: url("../images/hegemony.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.heteronormativity {
+    background-image: url("../images/heteronormativity.jpg");
+    background-size: cover;
+    background-position: top left;
+    color: black;
+}
+
+.intersectionality {
+    background-image: url("../images/intersectionality.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.oppression {
+    background-image: url("../images/oppression.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.patriarchy {
+    background-image: url("../images/patriarchy.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+.sexism {
+    background-image: url("../images/sexism.jpg");
+    background-size: cover;
+    background-position: top center;
+    color: black;
 }
